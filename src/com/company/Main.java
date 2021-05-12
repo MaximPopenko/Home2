@@ -159,26 +159,57 @@ public class Main {
             }
         }*/
 
-//6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр.
 
-        Scanner input = new Scanner(System.in);
-        int[] array = new int[3];
+//6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр (Второй вариант).
+/*
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        String s = scanner.nextLine();
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Please enter a number");
-            array[i] = input.nextInt();
-        }
+        char[] result = s.toCharArray();
 
-        String str = "11 34 3 45 23 5 67";
-        String strArr[] = str.split(" ");
-        int numArr[] = new int[strArr.length];
-        for (int i = 0; i < strArr.length; i++) {
-            numArr[i] = Integer.parseInt(strArr[i]);
-            // System.out.println(numArr[i]);
+        for (int i = 0; i < result.length; i++) {
+            for (int k = i + 1; k < result.length; k++) {
+                if (result[i] == result[k]) {
+                    System.out.println("Number " + s + " is incorrect! Number containing the same numbers " + result[i] + " and " + result[k]);
+                }
+
+            }
+        }*/
+//6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр (Первый вариант).
+
+/*        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите трехзначное число");
+        String s = scanner.nextLine();
+
+        char[] result = s.toCharArray();
+
+        if (result[0] == result[1]) {
+            System.out.println("Не правильное число 1");
+        } else if (result[0] == result[2]) {
+            System.out.println("Не правильное число 2");
+        } else if (result[0] == result[2]) {
+            System.out.println("Не правильное число 3");
+        } else {
+            System.out.println("ok");
+        }*/
 
 //6.6. «Счастливые» числа.
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        String s = scanner.nextLine();
 
+        char[] result = s.toCharArray();
+
+        for (int i = 0; i < result.length; i++) {
+            for (int k = i + 1; k < result.length; k++) {
+                if (result[i] == result[k]) {
+                    System.out.println("Number " + s + " is incorrect! Number containing the same numbers " + result[i] + " and " + result[k]);
+                }
+
+            }
+        }
 
     }
 }
