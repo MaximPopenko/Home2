@@ -10,16 +10,16 @@ public class Main {
     public static void main(String[] args) {
 //1. Приветствовать любого пользователя при вводе его имени через командную строку.
 
-/*        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name!");
         String name = scanner.nextLine();
-        System.out.println("Hello, " + name);
-        scanner.close();*/
+        System.out.println("Hello, " + name + "!");
+        scanner.close();
 
 
 //2. Отобразить в окне консоли аргументы командной строки в обратном порядке.
 
-  /*      String arr = Arrays.toString(args);
+/*        String arr = Arrays.toString(args);
         String[] items = arr.replaceAll("\\[", "").replaceAll("]", "").replaceAll("\\s", "").split(",");
 
         int[] res = new int[items.length];
@@ -33,12 +33,12 @@ public class Main {
         System.out.println();
         for (int i = res.length - 1; i >= 0; i--) {
             System.out.print(res[i] + " ");
-              }
-*/
+              }*/
+
 //3. Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.
 
 /*        Scanner scan_val = new Scanner(System.in);
-        System.out.println("Enter value:");
+        System.out.println("Enter number:");
         int input_val = scan_val.nextInt();
 
 
@@ -52,24 +52,25 @@ public class Main {
 
 //4. Ввести пароль из командной строки и сравнить его со строкой-образцом.
 
-   /*     String pattern_pass = "password111";
+/*
+        String pattern_pass = "password111";
 
         Scanner pass_scan = new Scanner(System.in);
         System.out.println("Enter password:");
         String input_pass = pass_scan.nextLine();
 
-        System.out.println(input_pass);
-
         if (pattern_pass.equals(input_pass)) {
             System.out.println("Password is correct!");
         } else {
             System.out.println("Password isn't correct!");
-        }*/
+        }
+*/
 
 
 //5. Ввести целые числа как аргументы командной строки, подсчитать их суммы (произведения) и вывести результат на консоль.
 
-/*        Scanner scanner1 = new Scanner(System.in);
+
+/*      Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter value 1:");
         Integer input_val1 = scanner1.nextInt();
 
@@ -79,10 +80,11 @@ public class Main {
 
         System.out.println(input_val1 + input_val2);*/
 
+
 //6.Ввести с консоли n целых чисел. На консоль вывести:
 //6.1. Четные и нечетные числа.
 
- /*       Scanner input = new Scanner(System.in);
+ /* Scanner input = new Scanner(System.in);
         int[] numbers = new int[5];
 
 
@@ -118,7 +120,7 @@ public class Main {
 
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Please enter a number");
+            System.out.println("Please enter a number:");
             array[i] = input.nextInt();
         }
 
@@ -127,42 +129,44 @@ public class Main {
 
 //6.3. Числа, которые делятся на 3 или на 9.
 
-      /*  Scanner input = new Scanner(System.in);
-        int[] array = new int[5];
+      /*        Scanner input = new Scanner(System.in);
+        int[] array = new int[3];
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Please enter a number");
+            System.out.println("Please enter a number:");
             array[i] = input.nextInt();
         }
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] % 3 == 0) {
-                System.out.println("число " + array[i] + " делится на 3");
-            } else if (array[i] % 9 == 0) {
-                System.out.println("число " + array[i] + " делится на 3");
+            if (array[i] % 9 == 0) {
+                System.out.println("number " + array[i] + " is divisible by 9");
+            } else if (array[i] % 3 == 0) {
+                System.out.println("number " + array[i] + " is divisible by 3");
             }
         }*/
 
 //6.4. Числа, которые делятся на 5 и на 7.
 
 /*        Scanner input = new Scanner(System.in);
-        int[] array = new int[5];
+        int[] array = new int[3];
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Please enter a number");
+            System.out.println("Please enter a number:");
             array[i] = input.nextInt();
         }
 
         for (int i = 0; i < array.length; i++) {
             if ((array[i] / 5) % 7 == 0) {
-                System.out.println("число " + array[i] + " делится на 5 и на 7");
+                System.out.println("Number " + array[i] + " is divisible by 5 and 7");
+            } else {
+                System.out.printf("Number " + array[i] + " is not divisible by 5 and 7");
             }
         }*/
 
 
 //6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр (Второй вариант).
-/*
-        Scanner scanner = new Scanner(System.in);
+
+/*        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number:");
         String s = scanner.nextLine();
 
@@ -173,10 +177,12 @@ public class Main {
                 if (result[i] == result[k]) {
                     System.out.println("Number " + s + " is incorrect! Number containing the same numbers " + result[i] + " and " + result[k]);
                 }
-
             }
-        }*/
-//6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр (Первый вариант).
+        }
+        System.out.printf("Number " + s + " is correct!");*/
+
+
+//6.5. Все трехзначные числа, в десятичной записи которых нет одинаковых цифр (Переделать).
 
 /*        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите трехзначное число");
@@ -196,20 +202,6 @@ public class Main {
 
 //6.6. «Счастливые» числа.
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        String s = scanner.nextLine();
-
-        char[] result = s.toCharArray();
-
-        for (int i = 0; i < result.length; i++) {
-            for (int k = i + 1; k < result.length; k++) {
-                if (result[i] == result[k]) {
-                    System.out.println("Number " + s + " is incorrect! Number containing the same numbers " + result[i] + " and " + result[k]);
-                }
-
-            }
-        }
 
     }
 }
